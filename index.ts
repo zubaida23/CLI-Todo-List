@@ -52,7 +52,7 @@ let addTask = async () => {
         }
     ]);
     todoList.push(newTask.task);
-    console.log(`\n "${chalk.cyanBright.bold(newTask.task)}" Task added successfully in Todo-List\n`);
+    console.log(` "${chalk.cyanBright.bold(newTask.task)}" Task added successfully in Todo-List`);
 };
 
 // Function to delete a task
@@ -66,7 +66,7 @@ let deleteTask = async () => {
         }
     ]);
     let deletedTask = todoList.splice(deleteTaskPrompt.index-1, 1);
-    console.log(`\n "${chalk.cyanBright.bold(deletedTask)}" Task deleted successfully from Todo-List\n`);
+    console.log(` "${chalk.cyanBright.bold(deletedTask)}" Task deleted successfully from Todo-List`);
 };
 
 // Function to update a task
@@ -85,7 +85,7 @@ let updateTask = async () => {
         }
     ]);
     todoList[updateTaskPrompt.index-1] = updateTaskPrompt.task;
-    console.log(`\n Task at index ${updateTaskPrompt.index} updated to "${chalk.cyanBright.bold(updateTaskPrompt.task)}" successfully [Check "View Todo-List" for updated list]\n`);
+    console.log(` Task at index ${updateTaskPrompt.index} updated to "${chalk.cyanBright.bold(updateTaskPrompt.task)}" successfully [Check "View Todo-List" for updated list]`);
 };
 
 // Function to view all tasks
